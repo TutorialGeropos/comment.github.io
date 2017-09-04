@@ -34,6 +34,7 @@ function getQueryVariable(variable) {
 }
 var disqus_config = function () { 
 	this.page.url = getQueryVariable("url");
+	this.language = "en";
 };
 (function() {
 	var d = document, s = d.createElement('script');
@@ -41,9 +42,6 @@ var disqus_config = function () {
 	s.setAttribute('data-timestamp', +new Date());
 	(d.head || d.body).appendChild(s);
 	
-	var disqus_config = function () { 
-  this.language = "en";
-};
 	
 })();
 </script>

@@ -1,44 +1,25 @@
-<div id="disqus_thread"></div>
-<script>
-window.addEventListener('message', receiveMessage, false);
-function receiveMessage(event)
-{
-    if (event.data) {
-        var msg;
-        try {
-            msg = JSON.parse(event.data);
-        } catch (err) {
-            // Do nothing
-        }
-        if (!msg)
-            return false;
+<script type='text/javascript'>
+                var disqus_shortname = &#39;geropos-id#39;;
+                var disqus_blogger_current_url = &quot;<data:blog.canonicalUrl/>&quot;;
 
-        if (msg.name === 'resize') {
-            window.parent.postMessage({
-              sentinel: 'amp',
-              type: 'embed-size',
-              height: msg.data.height
-            }, '*');
-        }
-    }
-}
-</script>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    var disqus_config = function () {
-        this.page.url = getElementById('CurrblogUrl').innerHTML;  // Replace PAGE_URL with your page's canonical URL variable
-        alert(this.page.url);
-        this.page.identifier = 'geropos'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
+                if (!disqus_blogger_current_url.length) {
+                    disqus_blogger_current_url = &quot;<data:blog.url/>&quot;;
+                }
 
-        s.src = '//geropos-id.disqus.com/embed.js';
+                var disqus_blogger_homepage_url = &quot;<data:blog.homepageUrl/>&quot;;
+                var disqus_blogger_canonical_homepage_url = &quot;<data:blog.canonicalHomepageUrl/>&quot;;
+            </script>
 
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
+            <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                <script type='text/javascript'>
+                    (function() {
+                        var bloggerjs = document.createElement(&#39;script&#39;);
+                        bloggerjs.type = &#39;text/javascript&#39;;
+                        bloggerjs.async = true;
+                        bloggerjs.src = &#39;//&#39;+geropos-id+&#39;.disqus.com/blogger_item.js&#39;;
+                        (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
+                    })();
+
+                </script>
+            </b:if>
+            </script>

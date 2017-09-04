@@ -57,7 +57,7 @@
                 var mutationObserverAvailable = typeof window.MutationObserver === 'function';
 
                 function bindObserver() {
-                    var frame = document.getElementsByTagName('iframe')[0];
+                    var frame = document.getElementsByTagName('amp-iframe')[0];
 
                     // if the frame is not available yet try again later
                     if (frame === null || frame === undefined) {

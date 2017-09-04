@@ -1,6 +1,24 @@
-
+<!DOCTYPE html>
+<html lang='en'>
+    <!-- Virtuall everything from https://labs.tomasino.org/disqus-in-amp -->
+    <head>
+        <meta charset="utf-8">
+        <title>Disqus AMP</title>
+        <meta name="viewport" content="width=device-width,minimum-scale=1">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="disqus_thread"></div>
         <script>
+            // From http://stackoverflow.com/questions/979975/how-to-get-the-value-from-the-get-parameters
             var QueryString = function () {
+              // This function is anonymous, is executed immediately and
+              // the return value is assigned to QueryString!
               var query_string = {};
               var query = window.location.search.substring(1);
               var vars = query.split("&");
@@ -57,7 +75,7 @@
                 var mutationObserverAvailable = typeof window.MutationObserver === 'function';
 
                 function bindObserver() {
-                    var frame = document.getElementsByTagName('amp-iframe')[0];
+                    var frame = document.getElementsByTagName('iframe')[0];
 
                     // if the frame is not available yet try again later
                     if (frame === null || frame === undefined) {
@@ -84,3 +102,5 @@
                 setInterval(checkSizeChange, mutationObserverAvailable ? 5000 : 500);
             })();
         </script>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 <script type='text/javascript'>
-                var disqus_shortname = &#39;geropos-id#39;;
+                var disqus_shortname = 'geropos-id';
                 var disqus_blogger_current_url = &quot;<data:blog.canonicalUrl/>&quot;;
 
                 if (!disqus_blogger_current_url.length) {
@@ -13,13 +13,22 @@
             <b:if cond='data:blog.pageType == &quot;item&quot;'>
                 <script type='text/javascript'>
                     (function() {
-                        var bloggerjs = document.createElement(&#39;script&#39;);
-                        bloggerjs.type = &#39;text/javascript&#39;;
+                        var bloggerjs = document.createElement('script');
+                        bloggerjs.type = 'text/javascript';
                         bloggerjs.async = true;
-                        bloggerjs.src = &#39;//&#39;+geropos-id+&#39;.disqus.com/blogger_item.js&#39;;
-                        (document.getElementsByTagName(&#39;head&#39;)[0] || document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(bloggerjs);
+                        bloggerjs.src = '//geropos-id.disqus.com/blogger_index.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bloggerjs);
                     })();
 
                 </script>
             </b:if>
+                <script type='text/javascript'>
+                (function() {
+                    var bloggerjs = document.createElement('script');
+                    bloggerjs.type = 'text/javascript';
+                    bloggerjs.async = true;
+                    bloggerjs.src = '//geropos-id.disqus.com/blogger_index.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bloggerjs);
+                })();
+
             </script>
